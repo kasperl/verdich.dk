@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Revolutionizing Embedded Software</title>
+    <link type="text/css" rel="stylesheet" href="http://verdich.dk/styles/style.css">
+  </head>
+  <body>
+    <h1>Revolutionizing Embedded Software</h1>
+    <h2>Master's Thesis by Kasper Verdich Lund and Jakob Roland Andersen</h2>
+    
+    <hr>
+    <p>
+      <a href="RES.pdf">Download the thesis as a PDF document (929 KB)</a>.
+    </p>
+    <hr>
+    
+    <h3>Preface</h3>
+    <p>
+      The work presented in this thesis was done in OOVM A/S, a small startup
+      company consisting of the two authors and Lars Bak. The mission of
+      OOVM A/S is to improve reliability, availability, and servicability of embedded
+      software by introducing a new software platform. The platform
+      consists of several components. The design of the components is the result
+      of animated discussions at the whiteboard between the three of us. This
+      thesis will focus on the virtual machine and the system software, both
+      of which were implemented by the authors. The programming environment,
+      source code compiler, and garbage collector were implemented by
+      Lars Bak.
+    </p>
+    <p>
+      We wish to thank our thesis supervisor, Ole Lehrmann Madsen, for
+      encouraging us to focus on the written part of the thesis in addition to
+      the software implementation. We also wish to thank Lars Bak, as well
+      as Steffen Grarup who has recently joined the OOVM team. Both have
+      made themselves available for technical discussions, and have provided
+      useful feedback on the different parts of this thesis. We look forward to
+      continuing to work together with you in the future. Furthermore, Mads
+      Torgersen deserves special thanks for many enlightening discussions on
+      object-orientation, reviewing the thesis, and for always bringing cake to
+      our meetings. Finally, we wish to thank all the others who have read and
+      provided feedback on this thesis. We really appreciate your efforts in helping
+      us ensure the accuracy and readability of this thesis.
+    </p>
+    <p style="text-align: right">
+      <i>Aarhus, May 2003</i>
+    </p>
+
+    <h3>Abstract</h3>
+    <p>
+      More than 90% of the microprocessors produced today are used in embedded
+      devices. With the current development tools, it is exceedingly difficult
+      to debug, profile, and update code running on embedded devices in operation.
+      This leaves developers unable to diagnose and solve software issues
+      on deployed embedded systems, something that is unacceptable for an industry
+      where robustness is paramount.
+    </p>
+    <p>
+      In this thesis, we show that it is possible to build a fully serviceable
+      software platform that fits on memory-constrained embedded devices. We
+      use virtual machine technology to enable full serviceability even for system
+      software components. At the bottom of the software stack, we have replaced
+      real-time operating systems with an efficient 30 KB object-oriented
+      virtual machine. The virtual machine contains a reflective interface that allows
+      developers to debug, profile, and update code running on embedded
+      devices even in operation. The serviceability extends to system software
+      components, including interrupt handlers, device drivers, and networking
+      protocols. Like any other components, the system software components
+      are implemented in safe, compact virtual machine instructions.
+    </p>
+    <p>
+      Our virtual machine uses an interpreter to execute both system software
+      and applications. On average, our interpreter is more than twice as
+      fast as the closest competitor for low-end embedded devices. It even outperforms
+      the fastest Java interpreter available. Compared to other object-oriented
+      virtual machines, our compact memory representation of objects
+      allows us to reduce the amount of memory spent on classes, methods, and
+      strings by 40-50%. The result is that our entire software stack fits in less
+      than 128 KB of memory. This way, our platform enables serviceability on a
+      wide range of industrial and consumer devices; something we believe will
+      revolutionize the way embedded software is developed and maintained.
+    </p>
+
+    <hr>
+    <p style="float:right">
+      <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://verdich.dk/images/valid-css" alt="Valid CSS" height="31" width="88"></a>
+    </p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4249006-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+  </body>
+</html>

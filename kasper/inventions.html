@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Inventions by Kasper Verdich Lund</title>
+    <link type="text/css" rel="stylesheet" href="http://verdich.dk/styles/style.css">
+  </head>
+  <body>
+    <h1>Inventions</h1>
+    <p>
+      This is a list of patented or patentable inventions by Kasper Verdich Lund.
+    </p>
+
+    <h2><a name="6738969">Removing unused compiled code</a></h2>
+    <h3>Non-intrusive gathering of code usage information to facilitate removing unused compiled code</h3>
+
+    <p>
+      <a href="http://patft.uspto.gov/netacgi/nph-Parser?patentnumber=6,738,969">United States 
+      Patent No. 6,738,969</a> invented by Lars Bak, Jakob Roland Andersen, 
+      and Kasper Verdich Lund (May 18, 2004).
+    </p>
+
+    <p>
+      One embodiment of the present invention provides a system that gathers code usage 
+      information to facilitate removing compiled code that has not been recently used. 
+      This method operates in a mixed-mode system that supports execution of both compiled 
+      code and interpreter code. During operation, the system gathers usage information for 
+      compiled methods within an application while the application is executing. Next, the 
+      system identifies compiled methods to be removed based on this usage information, and 
+      removes identified compiled methods so that interpreter code is executed for the compiled 
+      methods instead of compiled code. In this way, the system frees up the memory space used 
+      to store the compiled methods. 
+    </p>
+
+    <h2><a name="7181732">Lazy type tagging</a></h2>
+    <h3>Method and apparatus for facilitating lazy type tagging for compiled activations</h3>
+
+    <p>
+      <a href="http://patft.uspto.gov/netacgi/nph-Parser?patentnumber=7,181,732">United States 
+      Patent No. 7,181,732</a> invented by Lars Bak and Kasper Verdich Lund (February 20, 2007).
+    </p>
+
+    <p>
+      One embodiment of the present invention provides a system for type tagging 
+      values in a compiled activation frame in a lazy manner to facilitate garbage 
+      collection. This system operates in a mixed-mode environment that supports both 
+      interpretation of byte codes and execution of compiled native code. Upon receiving 
+      an invocation of a method, the system creates an activation frame for the method 
+      on the execution stack. If the method is executing in interpreted mode, the interpreter 
+      maintains a tag for each value in the activation frame during execution. The tag 
+      indicates whether the value is a reference type or a primitive type. However, if the 
+      method is executing in compiled mode, the system allocates space for tags for each value 
+      in the activation frame, but does not fill in the tags during execution. This allows 
+      the tags to be filled in at a future time when needed. 
+    </p>
+
+    <h2><a name="8244775">Fast dynamic property access using map objects</a></h2>
+    <h3>Using map objects to access object properties in a dynamic object-oriented programming language</h3>
+
+    <p>
+      <a href="http://patft.uspto.gov/netacgi/nph-Parser?patentnumber=8,244,775">United States 
+      Patent No. 8,244,775</a> invented by Lars Bak and Kasper Verdich Lund (August 14, 2012).
+    </p>
+
+    <p>
+      One embodiment of the present invention provides a system that uses map objects to 
+      access object properties for a program written in a dynamic object-oriented programming 
+      language, thereby facilitating property access for languages that allow additional 
+      properties to be defined for objects at runtime. During operation, the system receives 
+      an object of an object type. This object is associated with a memory region and a given 
+      map object (from a set of map objects associated with the given object type) that describes 
+      how properties of the object are mapped to fields in the memory region. When receiving a 
+      request to access a property of the object, the system determines whether the given map 
+      object includes a field mapping for the property. If so, the system accesses a field in 
+      the memory region associated with the property using the field mapping.
+    </p>
+
+    <h2><a name="8392881">Fast dynamic property access using code stubs</a></h2>
+    <h3>Supporting efficient access to object properties in a dynamic object-oriented programming language</h3>
+
+    <p>
+      <a href="http://patft.uspto.gov/netacgi/nph-Parser?patentnumber=8,392,881">United States 
+      Patent No. 8,392,881</a> invented by Kasper Verdich Lund and Lars Bak (March 5, 2013).
+    </p>
+
+    <p>
+      One embodiment of the present invention provides a system that supports efficient access
+      to object properties in a dynamic object-oriented programming language. During operation, 
+      the system receives a request to access a property for an object associated with a given 
+      map object. The system then determines a hash value using the given map object and a 
+      signature for the property, and uses the hash value to retrieve a code stub from a cache. 
+      Next, the system executes this code stub, which includes instructions that facilitate 
+      accessing the property, to access a memory field associated with the property.
+    </p>
+
+    <h2><a name="8677335">On-stack replacement strategy</a></h2>
+    <h3>Performing on-stack replacement for outermost loops</h3>
+
+    <p>
+      <a href="http://patft.uspto.gov/netacgi/nph-Parser?patentnumber=8,677,335">United States 
+      Patent No. 8,677,335</a> invented by Kevin Millikin, Mads Sig Ager, Kasper Verdict Lund,
+      and Florian Schneider (March 18, 2014).
+    </p>
+
+    <p>
+      Disclosed herein are methods and systems for using on stack replacement for optimization 
+      of software. A source code is compiled into an unoptimized code on a computing device. 
+      The unoptimized code is then executed on a computing device. A hot count is incremented. 
+      It is then determined whether a function within the unoptimized code is hot. If a function 
+      is determined to be hot, an OSR triggering code is inserted at a back edge of each loop 
+      within the function. The OSR triggering code is configured to trigger OSR at a loop depth 
+      that is less than the hot count.      
+    </p>
+
+    <h2><a name="20060242631">Code fragment sharing</a></h2>
+    <h3>Process and system for sharing program fragments</h3>
+    
+    <p>
+      United States patent application #20060242631 invented by Jakob Roland Andersen, Lars Bak,
+      Kasper Verdich Lund, and Steffen Grarup (April 22, 2005).     
+    </p>
+
+    <p>
+      A technique for sharing code fragments involves detecting
+      identical code fragments, then replacing code fragments with
+      references to an identical code fragment. A process according to
+      the technique may include detecting identical code fragments in
+      one or more modules, presenting at runtime a single code
+      fragment that is identical to the identical code fragments, and
+      automatically sharing the single code fragment among the one or
+      more modules. A system according to the technique may include a
+      code fragments database that may includes code fragments and a
+      code server configured to receive requests for a program and
+      provide references to one or more of the code fragments in the
+      code fragments database. Another system according to the
+      technique may include a first object, a second object, and a
+      method object, wherein a reference associated with a first
+      method of the first object and the reference associated with a
+      second method of the second object are pointers to the method
+      object.
+    </p>
+
+    <h2><a name="20060242654">Inline cache sharing</a></h2>
+    <h3>Process and apparatus for sharing inline caches</h3>
+    
+    <p>
+      United States patent application #20060242654 invented by Kasper Verdich Lund, Lars Bak,
+      Jakob Roland Andersen, and Steffen Grarup (April 22, 2005).     
+    </p>
+
+    <p>
+      A technique for dynamic dispatch involves adapting a method at a
+      dispatch point to reference a state cache. State of the state
+      cache may be associated with an object type and a method
+      signature. When a method is adapted at the dispatch point to
+      reference a state cache, the reference is to a state cache
+      associated with a state that matches the method signature and
+      the object type of the object dispatched upon. The state cache
+      may be shared among multiple methods with similar associated
+      states to reduce memory requirements.
+    </p>
+
+    <h2><a name="20060248130">Real-time relocation of objects</a></h2>
+    <h3>Process and system for real-time relocation of objects during garbage collection</h3>
+    
+    <p>
+      United States patent application #20060248130 invented by Steffen Grarup, Lars Bak,
+      Kasper Verdich Lund, and Jakob Roland Andersen (April 22, 2005).     
+    </p>
+
+    <p>
+      A technique for dynamically relocating an object during garbage
+      collection involves guaranteeing bounds on thread pause times. A
+      process according to the technique may include pausing threads,
+      bounding pause times by scanning only one of a plurality of
+      threads, and resuming the threads. Another process according to
+      the technique may include suspending a plurality of threads,
+      relocating an object to a new memory location, updating
+      references associated with an old memory location for only one
+      of the threads such that the references are associated with the
+      new memory location, and resuming the threads. In an embodiment,
+      the process may include initially marking each of the threads
+      "unscanned." In another embodiment, the process may include
+      reading the object from the first memory location and writing
+      the object to the second memory location. An example system
+      according to the technique may include a scheduler and a
+      relocation engine. In an embodiment, the scheduler may suspend
+      threads in preparation for dynamic object relocation and then
+      resumes the threads after scanning one, and only one, of the
+      thread stacks. In an embodiment, the thread associated with the
+      scanned thread stack may then be marked "scanned."
+    </p>
+
+    <h2><a name="20150199186">Inline caches as data</a></h2>
+    <h3>Implement inline cache using a data array</h3>
+    
+    <p>
+      United States patent application #20150199186 invented by Srdjan Mitrovic, 
+      Kasper Verdich Lund, and Ivan Posva (October 7, 2011).     
+    </p>
+
+    <p>
+      Methods and systems are provided for implementing an inline cache that uses a 
+      data array to perform receiver class checks. The data array contains classes, 
+      targets, and counters. The invocation is forwarded to the appropriate target 
+      when the checked class matches. On the other hand, an inline cache miss expands 
+      the data array with the new receiver class. The inline cache stub counts the 
+      invocations for specific classes and stores the count into the data array. The 
+      optimizing compiler can generate better code using the call type frequency (e.g., 
+      sort checks, limit the number of checks to the most frequently used classes, etc.).
+    </p>
+
+    <h2><a name="20150199187">Fast startup through eager program tokenization</a></h2>
+    <h3>Eager tokenization of programs and distribution of token sequences to client</h3>
+    
+    <p>
+      United States patent application #20150199187 invented by Matthias Hausner, 
+      Kasper Verdich Lund, and Ivan Posva (October 7, 2011).     
+    </p>
+
+    <p>
+      Methods and systems are provided for increasing the speed at which source code 
+      is incrementally compiled by eagerly tokenizing the source code and retaining the 
+      sequence of tokens for later use of the compiler. The token sequence may be stored 
+      along with a snapshot of the execution state of the program. This snapshot 
+      represents the program logic as well as a specific state of the program. The 
+      snapshot can be sent to the client, which then recreates the state of the program. 
+      Fast startup time of programs on the client is achieved by incrementally compiling 
+      only the parts of the program that are executed. Rather than tokenizing the program 
+      each time a small portion of it is compiled, the sequence of tokens stored in the 
+      snapshot may be used.
+    </p>
+
+    <hr>
+    <p style="float:right">
+      <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://verdich.dk/images/valid-css" alt="Valid CSS" height="31" width="88"></a>
+    </p>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4249006-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+  </body>
+</html>
