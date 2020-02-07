@@ -1,0 +1,5 @@
+body { margin-left: 2em; margin-right: 2em; font-family: sans-serif; }
+img  { border-style: none; }
+p    { text-align: justify; }
+td        { vertical-align: top; text-align: justify; }
+td.nowrap { white-space: nowrap; padding-right: 1em; }
